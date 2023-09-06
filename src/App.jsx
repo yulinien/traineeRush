@@ -7,7 +7,7 @@ import { CartContext } from './context/Context';
 function App() {
   const { cartIsShown, isLoading } = useContext(CartContext);
   return (
-    <div className="App">
+    <div className="App"> 
       {cartIsShown && <Cart />}
       <Header />
       {!isLoading && <Meals />}
