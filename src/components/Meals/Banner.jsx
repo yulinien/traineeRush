@@ -1,5 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import classes from '../../styles/Banner.module.css';
+import { BsChevronLeft } from "react-icons/bs";
+import { BsChevronRight } from "react-icons/bs";
 
 function Banner ({Popular}){
 	const [currentId,setCurrentId]=useState(0)
@@ -20,7 +22,9 @@ function Banner ({Popular}){
 	return(			
 		<div>	
             <div className={classes.PopularGrid}>
-                <button className={classes.lBtn} onClick={prev}> {"<"} </button>
+                <button className={classes.lBtn} onClick={prev}> 
+				<BsChevronLeft/>
+				 </button>
                 {Popular.map((el,id)=>(
                     <div className={`${classes.sliderSlide} ${currentId===id?classes.sliderSlideActive:""}`} key={`banner${el.productNumber}`}>
                     <img className={classes.ProduceImage} src={el.img}  alt=""/>
@@ -32,7 +36,9 @@ function Banner ({Popular}){
 						</div>		
 					))}
 				</div>
-                <button className={classes.rBtn} onClick={next}> {">"}</button>
+                <button className={classes.rBtn} onClick={next}> 
+				<BsChevronRight/>
+				</button>
             </div>
         </div>
 	);
