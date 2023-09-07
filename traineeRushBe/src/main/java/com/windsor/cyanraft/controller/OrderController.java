@@ -67,4 +67,24 @@ public class OrderController {
 
         return ResponseEntity.status(HttpStatus.CREATED).body(order);
     }
+
+    @GetMapping(value = "/order/{orderId}/print")
+    public ResponseEntity<Resource> orderPrint(@PathVariable Integer orderId){
+
+        String fileName = orderService.orderPrint(orderId);
+        Path path = Paths.get(fileName);
+        String contentType = "application/csv; charset=utf-8";
+        org.springframework.core.io.Resource resource = null;
+        try {
+            System.out.println("[Get Order print file uri:{}]" + path.toUri());
+            resource = new UrlResource(path.toUri());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        assert resource != null;
+        return ResponseEntity.ok()
+                .contentType(MediaType.parseMediaType(contentType))
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + resource.getFilename() + "\"")
+                .body(resource);
+    }
 }
