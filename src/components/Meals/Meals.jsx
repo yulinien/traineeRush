@@ -7,6 +7,7 @@ import MacuImg from '../../assets/macu.png';
 import FiveImg from '../../assets/5min.png';
 import MilkshaImg from '../../assets/Milksha.jpg';
 import {FiftyB} from '../../DummyData/FiftyB';
+import Banner from './Banner';
 
 function Meals() {
   // const { mealItem } = useContext(CartContext);
@@ -14,6 +15,7 @@ function Meals() {
     <>
       <section className={classes.summary}>
         {/* TODO 推薦商品輪播 */}
+        <Banner Popular={FiftyB}/>
       </section>
       <section className={classes.meals}>
         <div className={classes.card}>

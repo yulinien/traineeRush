@@ -2,6 +2,9 @@
     display: flex;
     overflow: hidden;
 }
+button{
+    cursor: pointer;
+}
 .lBtn{
     z-index: 10;
 	position: absolute; 
@@ -26,5 +29,45 @@
 }
 .ProduceImage{
     object-fit: contain;
-    width: 40vw;
+    width: 400px;
+}
+.sliderSlide{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0;
+	transition: opacity 0.5s ease-out;
+	
+}
+.sliderSlideActive{
+	opacity: 1;
+}
+/* DOT */
+.sliderDots{
+	display: flex;
+	position: absolute;
+	bottom: 1vw;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.sliderDot{
+	position: relative;
+	width: 1vw;
+	height: 1vw;
+	border-radius: 50%;
+	background-color: #559392;
+	margin: 0 0.5vw;
+	cursor: pointer;
+}
+.sliderDot::before{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #00003d;
+	border-radius: 50%;
+	opacity: 0;
+}
+.sliderDotActive::before{
+	opacity: 1;
 }

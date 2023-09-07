@@ -9,6 +9,9 @@ function Banner ({Popular}){
 	const prev=()=>{
 		setCurrentId((currentId)=>currentId>0?currentId-1:Popular.length-1);
 	}
+	const jumpTo=(id)=>{
+		setCurrentId(id);
+	}
 	useEffect(()=>{
 		setCurrentId(0);
 	 	
@@ -23,6 +26,12 @@ function Banner ({Popular}){
                     <img className={classes.ProduceImage} src={el.img}  alt=""/>
                     </div>
                 ))}
+				<div className={classes.sliderDots}>
+					{Popular.map((el,id)=>(
+						<div onClick={jumpTo.bind(this,id)} className={`${classes.sliderDot} ${currentId===id?classes.sliderDotActive:""}`}key={el.key}>
+						</div>		
+					))}
+				</div>
                 <button className={classes.rBtn} onClick={next}> {">"}</button>
             </div>
         </div>
