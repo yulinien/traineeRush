@@ -19,12 +19,17 @@ Meals.jsx > Meals.module.css
 Modal.jsx >Modal.module.css (點開購物車背景變暗)
 
 舉例:
+
 import classes from '../../styles/Header.module.css'; 
-<header className={classes.header}>
-就是 Header.module.css 裡面的 .header{...}
-calsses名稱可以自己取
+
+header className={classes.header}
+
+就是指 Header.module.css 裡面的 .header{...}
+
+
 
 功能:
+
 加入購物車的功能我放在MealItem裡面
 
 
