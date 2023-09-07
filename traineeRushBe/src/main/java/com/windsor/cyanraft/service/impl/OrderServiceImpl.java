@@ -119,4 +119,31 @@ public class OrderServiceImpl implements OrderService {
 
         return orderId;
     }
+
+    @Override
+    public String orderPrint(Integer orderId) {
+
+        var orderList = orderDao.getOrderItemsByOrderId(orderId);
+
+
+
+        String fileDatetime = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+        String fileName = "order_list"+ fileDatetime + "xlsx";
+        String filePath = tempFiles + fileName;
+
+        List<ExcelExportEntity> excelParams;
+
+        excelParams = List.of(
+                new ExcelExportEntity("Order_Item", "orderItemId", 20),
+                new ExcelExportEntity("order_id", "orderId", 20),
+                new ExcelExportEntity("product_id", "productId", 20),
+                new ExcelExportEntity("quantity","quantity",20),
+                new ExcelExportEntity("amount","amount",20),
+                new ExcelExportEntity("product_name","productName",25),
+                new ExcelExportEntity("image_url","imageUrl",40)
+        );
+
+        ExcelUtil.exportExcel(orderList,null , fileName, excelParams, filePath, true);
+        return filePath;
+    }
 }
