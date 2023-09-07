@@ -70,6 +70,7 @@
   background-color: white;
   display: flex;
   overflow: auto;
+  margin-bottom: 50px;
 }
 .input {
   display: flex;
