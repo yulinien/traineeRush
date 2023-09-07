@@ -22,13 +22,13 @@ function Banner ({Popular}){
             <div className={classes.PopularGrid}>
                 <button className={classes.lBtn} onClick={prev}> {"<"} </button>
                 {Popular.map((el,id)=>(
-                    <div className={`${classes.sliderSlide} ${currentId===id?classes.sliderSlideActive:""}`} key={el.id}>
+                    <div className={`${classes.sliderSlide} ${currentId===id?classes.sliderSlideActive:""}`} key={`banner${el.productNumber}`}>
                     <img className={classes.ProduceImage} src={el.img}  alt=""/>
                     </div>
                 ))}
 				<div className={classes.sliderDots}>
 					{Popular.map((el,id)=>(
-						<div onClick={jumpTo.bind(this,id)} className={`${classes.sliderDot} ${currentId===id?classes.sliderDotActive:""}`}key={el.key}>
+						<div onClick={jumpTo.bind(this,id)} className={`${classes.sliderDot} ${currentId===id?classes.sliderDotActive:""}`} key={`'dot${id}`}>
 						</div>		
 					))}
 				</div>
