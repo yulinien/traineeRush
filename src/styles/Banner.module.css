@@ -1,0 +1,30 @@
+.PopularGrid{
+    display: flex;
+    overflow: hidden;
+}
+.lBtn{
+    z-index: 10;
+	position: absolute; 
+	top: 50%;
+	left: 0;
+	border-radius: 100%;
+	border-color: white;
+	border-style: solid;
+	color: blue;
+	font-size: 1.5em;
+}
+.rBtn{
+    z-index: 10;
+	position: absolute; 
+	top: 50%;
+	right: 0;
+	border-radius: 100%;
+	color: blue;
+	border-color: white;
+	border-style: solid;
+	font-size: 1.5em;
+}
+.ProduceImage{
+    object-fit: contain;
+    width: 40vw;
+}
