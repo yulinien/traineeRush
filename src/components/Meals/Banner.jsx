@@ -27,7 +27,7 @@ function Banner ({Popular}){
 				 </button>
                 {Popular.map((el,id)=>(
                     <div className={`${classes.sliderSlide} ${currentId===id?classes.sliderSlideActive:""}`} key={`banner${el.productNumber}`}>
-                    <img className={classes.ProduceImage} src={el.img}  alt=""/>
+                    <img className={classes.ProductImage} src={el.img}  alt=""/>
                     </div>
                 ))}
 				<div className={classes.sliderDots}>
