@@ -20,6 +20,7 @@ import classes from '../../styles/Header.module.css';
 就是 Header.module.css 裡面的 .header{...}
 calsses名稱可以自己取
 
-//功能
+功能:
 加入購物車的功能我放在MealItem裡面
+
 
