@@ -4,7 +4,7 @@ import { CartContext } from '../../context/Context';
 
 function MealItem({
   // eslint-disable-next-line react/prop-types
-  id, name, description, price,
+  id, name, img, price,
 }) {
   const amountInputRef = useRef();
   const { cart, dispatch } = useContext(CartContext);
@@ -27,7 +27,7 @@ function MealItem({
         payload: {
           id: amountInputRef.current.id,
           name,
-          description,
+          img,
           price,
           quantity: parseInt(quantity, 10),
         },
@@ -36,27 +36,17 @@ function MealItem({
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    checkCart(amountInputRef.current.id, amountInputRef.current.value);
+    checkCart(amountInputRef.current.id, 1);
   };
   return (
-    <li className={classes.meal}>
+    <li className={classes.meal} key={id} ref={amountInputRef}>
       <div>
         <h3>{name}</h3>
-        <div className={classes.description}>{description}</div>
-        <div className={classes.price}>{price}</div>
+        <img src={img} alt="" />
+        <div className={classes.price}>$$:{price}</div>
       </div>
       <form className={classes.form} onSubmit={onSubmit}>
         <div className={classes.input}>
-          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-          <label htmlFor={id}>Amount</label>
-          <input
-            ref={amountInputRef}
-            id={id}
-            type="number"
-            min="1"
-            max="5"
-            defaultValue="1"
-          />
         </div>
         <button type="submit">+ Add</button>
       </form>

@@ -1,0 +1,45 @@
+export const FiftyB=[
+    {
+        img:'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC9pbWFnZS1wcm9jL3Byb2Nlc3NlZF9pbWFnZXMvYzIyYjE5M2YxNWEzNDAyNDlmNTY0ZWY2NDZiNTZlNDcvNTk1NGJjYjAwNmIxMGRiZmQwYmMxNjBmNjM3MGZhZjMuanBlZw==',
+        productNumber:'fb1',
+        name:'四季春珍波椰',
+        price:40,
+    },
+    {
+        img:'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC9pbWFnZS1wcm9jL3Byb2Nlc3NlZF9pbWFnZXMvY2YwODQ1NjJlNGYzNjc0YmFjNDA4YWQxYmIwOWE5MTIvNTk1NGJjYjAwNmIxMGRiZmQwYmMxNjBmNjM3MGZhZjMuanBlZw==',
+        productNumber:'fb2',
+        name:'波霸奶茶',
+        price:50,
+    },
+    {
+        img:'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC9pbWFnZS1wcm9jL3Byb2Nlc3NlZF9pbWFnZXMvZGFhZTdlYjRkZTgxMzBkYjg1N2ZjYjA5N2I4ZmNlZDkvNTk1NGJjYjAwNmIxMGRiZmQwYmMxNjBmNjM3MGZhZjMuanBlZw==',
+        productNumber:'fb3',
+        name:'紅茶拿鐵',
+        price:60,
+    },
+    {
+        img:'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC9pbWFnZS1wcm9jL3Byb2Nlc3NlZF9pbWFnZXMvMzkwYWU3NDJjMDBhYmIxMTllMWEyMWVhMmFlMTVmZjEvNTk1NGJjYjAwNmIxMGRiZmQwYmMxNjBmNjM3MGZhZjMuanBlZw==',
+        productNumber:'fb4',
+        name:'黃金烏龍',
+        price:35,
+    },
+    {
+        img:'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC9pbWFnZS1wcm9jL3Byb2Nlc3NlZF9pbWFnZXMvYzc3MDliODA3ODEzMTUyZmViMTEwZmNiZjI5OWRmN2MvNTk1NGJjYjAwNmIxMGRiZmQwYmMxNjBmNjM3MGZhZjMuanBlZw==',
+        productNumber:'fb5',
+        name:'柚子紅',
+        price:50,
+    },
+    {
+        img:'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC9pbWFnZS1wcm9jL3Byb2Nlc3NlZF9pbWFnZXMvYzk5N2I1MTkxNTA2ZGRiZmE4ZmQ4NDU3ZDBjOGY5MWMvNTk1NGJjYjAwNmIxMGRiZmQwYmMxNjBmNjM3MGZhZjMuanBlZw==',
+        productNumber:'fb6',
+        name:'冰淇淋紅茶',
+        price:50,
+    },
+    {
+        img:'https://cn-geo1.uber.com/image-proc/resize/eats/format=webp/width=550/height=440/quality=70/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC9pbWFnZS1wcm9jL3Byb2Nlc3NlZF9pbWFnZXMvODM4ZTcxZWVjMDA5YWI4NGRmMjVlZDBkNzdiZGJkN2UvNTk1NGJjYjAwNmIxMGRiZmQwYmMxNjBmNjM3MGZhZjMuanBlZw==',
+        productNumber:'fb7',
+        name:'可可芭蕾拿鐵',
+        price:70,
+    },
+    
+];

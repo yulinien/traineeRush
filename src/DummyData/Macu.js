@@ -1,0 +1,45 @@
+export const Macu=[
+    {
+        img:,
+        productNumber:,
+        name:,
+        price,
+    },
+    {
+        img:,
+        productNumber:,
+        name:,
+        price,
+    },
+    {
+        img:,
+        productNumber:,
+        name:,
+        price,
+    },
+    {
+        img:,
+        productNumber:,
+        name:,
+        price,
+    },
+    {
+        img:,
+        productNumber:,
+        name:,
+        price,
+    },
+    {
+        img:,
+        productNumber:,
+        name:,
+        price,
+    },
+    {
+        img:,
+        productNumber:,
+        name:,
+        price,
+    },
+    
+];
