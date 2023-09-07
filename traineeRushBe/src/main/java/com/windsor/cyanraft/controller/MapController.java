@@ -16,7 +16,7 @@ import com.google.maps.model.TravelMode;
 @RequestMapping("/map")
 public class MapController {
 
-    private String apiKey = "AIzaSyAIIHneT5FxG8d7evKo5eTmFopqAPGwpbo";
+    private final String apiKey = "AIzaSyAIIHneT5FxG8d7evKo5eTmFopqAPGwpbo";
 
     @GetMapping
     public MapResponse getDistance(@RequestParam String from,
