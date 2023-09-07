@@ -33,8 +33,9 @@ button :hover{
     background-color: rgba(0, 0, 0, 0);
 }
 .ProduceImage{
-    object-fit: contain;
-    width: 400px;
+    object-fit: cover;
+    width: 100%;
+    max-height: 400px;
 }
 .sliderSlide{
 	width: 100%;
