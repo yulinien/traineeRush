@@ -1,5 +1,6 @@
 package com.windsor.cyanraft.service.impl;
 
+import cn.afterturn.easypoi.excel.entity.params.ExcelExportEntity;
 import com.windsor.cyanraft.dao.OrderDao;
 import com.windsor.cyanraft.dao.ProductDao;
 import com.windsor.cyanraft.dao.UserDao;
@@ -11,15 +12,19 @@ import com.windsor.cyanraft.model.OrderItem;
 import com.windsor.cyanraft.model.Product;
 import com.windsor.cyanraft.model.User;
 import com.windsor.cyanraft.service.OrderService;
+import com.windsor.cyanraft.util.ExcelUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -36,6 +41,8 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private ProductDao productDao;
 
+    @Value("./src/main/resources/template/tempFiles/")
+    private String tempFiles;
     @Override
     public void isUserExist(Integer userId) {
         User user = userDao.getUserById(userId);
@@ -124,8 +131,6 @@ public class OrderServiceImpl implements OrderService {
     public String orderPrint(Integer orderId) {
 
         var orderList = orderDao.getOrderItemsByOrderId(orderId);
-
-
 
         String fileDatetime = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
         String fileName = "order_list"+ fileDatetime + "xlsx";
